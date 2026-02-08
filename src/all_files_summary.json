@@ -1,0 +1,17 @@
+{
+  "backend/main.mo": "Defines an empty Motoko actor with no backend logic.",
+  "feature_evidence.json": "Lists implemented frontend features, associated files, components, and test IDs for static business-awareness page.",
+  "frontend-file-summaries.txt": "Contains prewritten summaries describing the purpose of key frontend components, styles, and configuration files.",
+  "frontend/index.css": "Base Tailwind layer defining design tokens, color variables, and dark-mode overrides for the project.",
+  "frontend/index.html": "Minimal HTML entry point mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Renders the BusinessAwarenessLanding component as the main app view.",
+  "frontend/src/components/business-awareness/TopicCard.tsx": "Reusable card component rendering a titled section with icon, description, and styling.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and manages an authenticated or anonymous backend actor via Internet Identity.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides Internet Identity authentication context, loading, login, and identity management logic.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file exporting nothing for unused backend queries.",
+  "frontend/src/index.css": "Global Tailwind stylesheet defining navy theme tokens, typography, and utility extensions.",
+  "frontend/src/main.tsx": "App bootstrap that sets up React Query, Internet Identity provider, and renders the root app.",
+  "frontend/src/pages/BusinessAwarenessLanding.tsx": "Main landing page with header, sticky nav, and five business-topic sections using TopicCard components.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending theme colors, layout, animations, and enabling plugins for typography, container queries, and animations.",
+  "project_state.json": "Project state metadata describing a static single‑page site build, existing feature requirements, and one pending feature request."
+}

@@ -1,0 +1,91 @@
+{
+  "kind": "build_request",
+  "title": "Create static single-page “Business Development Awareness” landing page",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a static, single-page frontend that reproduces the provided HTML content structure in React with TypeScript and Tailwind: a header with title and subtitle, an anchor-based navigation bar, a main section containing five topic cards, and a footer. Use the following exact section IDs for anchor navigation: share, trading, ecommerce, dropshipping, importexport.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Business Development Awareness</title>\n    ...\n    <div class=\"card\" id=\"share\">...\n    <div class=\"card\" id=\"trading\">...\n    <div class=\"card\" id=\"ecommerce\">...\n    <div class=\"card\" id=\"dropshipping\">...\n    <div class=\"card\" id=\"importexport\">...\n..."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The app renders a single page titled “Business Development Awareness”.",
+        "The top navigation contains links labeled: “Share Market”, “Trading”, “E-Commerce”, “Dropshipping”, “Import & Export”.",
+        "Clicking each nav link scrolls to the corresponding section on the same page using the exact IDs: #share, #trading, #ecommerce, #dropshipping, #importexport.",
+        "The page includes five visible content cards with the same headings and paragraph content as the user-provided HTML.",
+        "The footer text shows: “© 2026 Business Awareness | Learn • Grow • Succeed”."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Style the page in Tailwind to match the intent of the provided embedded CSS: light gray page background, navy header/footer with white text, a slightly lighter navy nav bar, centered max-width content area, and white cards with rounded corners and subtle shadow. Ensure the layout is responsive (nav wraps on small screens, content remains readable on mobile).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "<style>\n        body {\n            margin: 0;\n            font-family: Arial, sans-serif;\n            background: #f4f6f9;\n            color: #333;\n        }\n\n        header {\n            background: #0d47a1;\n            color: white;\n            padding: 20px;\n            text-align: center;\n        }\n\n        nav {\n            background: #1565c0;\n            display: flex;\n            justify-content: center;\n            flex-wrap: wrap;\n        }\n...\n        .card {\n            background: white;\n            padding: 20px;\n            margin-bottom: 20px;\n            border-radius: 8px;\n            box-shadow: 0 4px 8px rgba(0,0,0,0.1);\n        }\n...\n        footer {\n            background: #0d47a1;\n            color: white;\n            text-align: center;\n            padding: 15px;\n            margin-top: 30px;\n        }\n    </style>"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Background color is a light gray equivalent to #f4f6f9.",
+        "Header and footer use a dark navy tone equivalent to #0d47a1 with white text.",
+        "Nav bar uses a navy tone equivalent to #1565c0; nav items have a hover state that darkens similarly to the header color.",
+        "Main content is centered with a max width around 900px and comfortable padding.",
+        "Each topic card is white, rounded (~8px), has a soft shadow, and has spacing between cards.",
+        "On small screens, the nav items wrap and remain clickable without overlapping."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add one coherent visual theme direction and apply it consistently across the page (color palette, typography scale, spacing, and interactive states), while keeping all user-facing text in English and preserving the meaning/content of the provided sections.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Use English for any user-facing text in the build request."
+        ]
+      },
+      "acceptanceCriteria": [
+        "A single, consistent theme is applied across header/nav/cards/footer (typography, spacing, hover/focus states).",
+        "All user-facing text is English.",
+        "No content sections are removed; the five topics remain present and readable."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/components/ui (read-only).",
+    "Do not edit immutable hook/entry files listed by the system (compose around them instead of modifying them).",
+    "Backend changes are not required for this static page."
+  ],
+  "nonGoals": [
+    "No authentication (Internet Identity) flow.",
+    "No database/persistence, admin panel, or content management features.",
+    "No multi-page routing requirement beyond a single landing page.",
+    "No backend canister APIs are required."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

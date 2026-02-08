@@ -1,0 +1,90 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Business Development Awareness static single-page landing",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement the single-page landing layout (header, anchor nav, five topic cards with exact IDs, footer) in React + TypeScript.",
+      "acceptanceCriteria": [
+        "The app renders a single page titled “Business Development Awareness”.",
+        "The top navigation contains links labeled: “Share Market”, “Trading”, “E-Commerce”, “Dropshipping”, “Import & Export”.",
+        "Clicking each nav link scrolls to the corresponding section on the same page using the exact IDs: #share, #trading, #ecommerce, #dropshipping, #importexport.",
+        "The page includes five visible content cards with the same headings and paragraph content as the user-provided HTML.",
+        "The footer text shows: “© 2026 Business Awareness | Learn • Grow • Succeed”."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/BusinessAwarenessLanding.tsx",
+          "operation": "create",
+          "description": "Create the static single-page layout in React/TSX: header (title/subtitle), anchor-based nav, main content with five topic card sections using the exact IDs (share, trading, ecommerce, dropshipping, importexport) and the same headings/paragraph text as the provided HTML, plus the required footer text."
+        },
+        {
+          "path": "frontend/src/components/business-awareness/TopicCard.tsx",
+          "operation": "create",
+          "description": "Create a small presentational component to render a topic card section (heading + paragraphs) while preserving the exact user-provided content and ensuring the section wrapper carries the required anchor ID."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the new BusinessAwarenessLanding page as the sole rendered view to satisfy the single-page requirement (no additional routes/pages introduced)."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Ensure the document title remains exactly “Business Development Awareness” and aligns with the rendered page content."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Apply Tailwind styling to match the provided CSS intent (colors, centered max-width layout, card styling, responsive wrapping nav).",
+      "acceptanceCriteria": [
+        "Background color is a light gray equivalent to #f4f6f9.",
+        "Header and footer use a dark navy tone equivalent to #0d47a1 with white text.",
+        "Nav bar uses a navy tone equivalent to #1565c0; nav items have a hover state that darkens similarly to the header color.",
+        "Main content is centered with a max width around 900px and comfortable padding.",
+        "Each topic card is white, rounded (~8px), has a soft shadow, and has spacing between cards.",
+        "On small screens, the nav items wrap and remain clickable without overlapping."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/BusinessAwarenessLanding.tsx",
+          "operation": "modify",
+          "description": "Add Tailwind classes to implement: light-gray page background, navy header/footer with white text, slightly lighter navy nav with hover-darkening, centered content container (approx ~900px max width), and white rounded cards with subtle shadow; ensure nav uses flex-wrap and spacing for small screens."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Set global/base styling to support the page background and consistent defaults (e.g., body background color equivalent to #f4f6f9 and base text color), while relying on Tailwind utilities for component-level styling."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme tokens (e.g., custom navy shades and optional container sizing) to make the required color palette and max-width behavior easy to apply consistently via utilities."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Establish and apply a coherent theme (typography, spacing, interactive states) consistently across the single-page layout while keeping all text in English and preserving all five topics.",
+      "acceptanceCriteria": [
+        "A single, consistent theme is applied across header/nav/cards/footer (typography, spacing, hover/focus states).",
+        "All user-facing text is English.",
+        "No content sections are removed; the five topics remain present and readable."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/BusinessAwarenessLanding.tsx",
+          "operation": "modify",
+          "description": "Normalize typography scale (title/subtitle/section headings/body), spacing rhythm, and interactive states (hover/focus-visible for nav links) using Tailwind utilities; keep all user-facing text in English and preserve the meaning/content of all five sections."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define consistent global typography defaults (font stack, base line-height) and focus styling support to ensure a cohesive theme across the page without altering read-only UI component files."
+        }
+      ]
+    }
+  ]
+}

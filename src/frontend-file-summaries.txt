@@ -1,0 +1,8 @@
+{
+  "frontend/src/App.tsx": "Main application entry point that renders the BusinessAwarenessLanding page component.",
+  "frontend/src/pages/BusinessAwarenessLanding.tsx": "Single-page landing component with header, sticky navigation with smooth scrolling, five topic cards (Share Market, Trading, E-Commerce, Dropshipping, Import & Export), and footer matching the user's design requirements.",
+  "frontend/src/components/business-awareness/TopicCard.tsx": "Reusable presentational component that renders individual topic sections with icon, title, and description in a styled card format with proper anchor IDs for navigation.",
+  "frontend/src/index.css": "Global styles with OKLCH color system defining navy color palette (dark #0d47a1, medium #1565c0, light gray #f4f6f9) and typography defaults for consistent theming across light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom navy color tokens, card shadow utilities, and design system tokens to support the Business Awareness theme.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as no backend queries are required for this static informational page."
+}

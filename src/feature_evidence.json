@@ -1,0 +1,65 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-static-single-page-frontend-that-reproduces-the-provided-html-content-structure-in-react-with-typescript-and-tailwind-a-header-with-title-and-subtitle-an-anchor-based-navigation-bar-a-main-section-containing-five-topic-cards-and-a-footer-use-the-following-exact-section-ids-for-anchor-navigation-share-trading-ecommerce-dropshipping-importexport",
+      "featureTitle": "Create a static, single-page frontend that reproduces the provided HTML content structure in React with TypeScript and Tailwind: a header with title and subtitle, an anchor-based navigation bar, a main section containing five topic cards, and a footer. Use the following exact section IDs for anchor navigation: share, trading, ecommerce, dropshipping, importexport.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx",
+        "frontend/src/components/business-awareness/TopicCard.tsx",
+        "frontend/src/pages/BusinessAwarenessLanding.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-style-the-page-in-tailwind-to-match-the-intent-of-the-provided-embedded-css-light-gray-page-background-navy-header-footer-with-white-text-a-slightly-lighter-navy-nav-bar-centered-max-width-content-area-and-white-cards-with-rounded-corners-and-subtle-shadow-ensure-the-layout-is-responsive-nav-wraps-on-small-screens-content-remains-readable-on-mobile",
+      "featureTitle": "Style the page in Tailwind to match the intent of the provided embedded CSS: light gray page background, navy header/footer with white text, a slightly lighter navy nav bar, centered max-width content area, and white cards with rounded corners and subtle shadow. Ensure the layout is responsive (nav wraps on small screens, content remains readable on mobile).",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/src/pages/BusinessAwarenessLanding.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-one-coherent-visual-theme-direction-and-apply-it-consistently-across-the-page-color-palette-typography-scale-spacing-and-interactive-states-while-keeping-all-user-facing-text-in-english-and-preserving-the-meaning-content-of-the-provided-sections",
+      "featureTitle": "Add one coherent visual theme direction and apply it consistently across the page (color palette, typography scale, spacing, and interactive states), while keeping all user-facing text in English and preserving the meaning/content of the provided sections.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/src/pages/BusinessAwarenessLanding.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
